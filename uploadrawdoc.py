@@ -13,7 +13,8 @@ if __name__ == '__main__':
     print("## Add some data to the index")   
     # url = "https://convmind-images.s3.us-east-2.amazonaws.com/pdfview/Fresh_Start_Program_Summary.pdf"
     # parsed_data = client.parse(file_url=url) #parse a url 
-    data = d_client.parse_local_file("resources/1906.09308.pdf","en") 
+    data = d_client.parse_local_file("resources/qa.pdf","en")
+    
     frames = DocConvert.document_to_frames(data, "en")
     a_client.replace_index(frames)
 
